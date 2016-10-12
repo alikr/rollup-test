@@ -1,0 +1,26 @@
+{
+  "name": "pack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.8.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "rollup": "^0.34.13",
+    "rollup-plugin-babel": "^2.6.1",
+    "uglifyjs": "^2.4.10"
+  },
+  "bin":{
+    "uglifyjs":"./node_modules/uglifyjs/bin/uglifyjs"
+  },
+  "scripts": {
+    "dev": "rollup -c -o dist/bundle.js",
+    "build": "rollup -c rollup.config.js && uglifyjs dist/bundle.js -c -m -e -o dist/bundle.min.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
